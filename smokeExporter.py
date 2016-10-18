@@ -17,7 +17,7 @@ def frameChange(scene):
     a = scene.objects["Smoke Domain"]
     ds = a.modifiers["Smoke"].domain_settings
     n = np.array(ds.density_grid)
-    with open("C:/Users/Peter/Documents/blender/Test smoke cache/frame{}".format(frame), 'wb') as stream:
+    with open("C:/Users/Peter/Documents/blender/Test smoke cache/frame{}".format(scene.frame_current), 'wb') as stream:
         n.tofile(stream)
     print("frame {} exported".format(scene.frame_current))
     
